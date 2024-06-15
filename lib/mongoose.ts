@@ -8,7 +8,6 @@ export const connectToDB = async () => {
 
   if (!process.env.MONGODB_URL) return console.log("Missing MongoDB URL");
 
-  // If the connection is already established, return without creating a new connection.
   if (isConnected) {
     console.log("MongoDB connection already established");
     return;
