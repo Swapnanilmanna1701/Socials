@@ -51,7 +51,7 @@ function ThreadCard({
             <Link href={`/profile/${author.id}`} className='relative h-11 w-11'>
               <Image
                 src={author.image}
-                alt='user_community_image'
+                alt='profile image'
                 fill
                 className='cursor-pointer rounded-full'
               />
