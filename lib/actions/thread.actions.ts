@@ -235,6 +235,6 @@ export async function addCommentToThread(
     revalidatePath(path);
   } catch (error: any) {
     console.error("Error while adding comment:", error);
-    throw new Error("Unable to add comment");
+    throw new Error(`Unable to add comment: ${error.message}`);
   }
 }

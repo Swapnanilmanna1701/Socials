@@ -83,5 +83,4 @@ function Comment({ threadId, currentUserImg, currentUserId }: Props) {
     </Form>
   );
 }
-
 export default Comment;
