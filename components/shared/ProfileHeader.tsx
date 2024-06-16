@@ -27,7 +27,7 @@ function ProfileHeader({
           <div className='relative h-20 w-20 object-cover'>
             <Image
               src={imgUrl}
-              alt='logo'
+              alt='profile image'
               fill
               className='rounded-full object-cover shadow-2xl'
             />
