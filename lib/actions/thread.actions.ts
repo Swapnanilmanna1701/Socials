@@ -220,7 +220,7 @@ export async function addCommentToThread(
     const commentThread = new Thread({
       text: commentText,
       author: userId,
-      parentId: threadId, // Set the parentId to the original thread's ID
+      parentId: threadId, 
     });
 
     
@@ -233,8 +233,8 @@ export async function addCommentToThread(
     await originalThread.save();
 
     revalidatePath(path);
-  } catch (err) {
-    console.error("Error while adding comment:", err);
+  } catch (error: any) {
+    console.error("Error while adding comment:", error);
     throw new Error("Unable to add comment");
   }
 }
