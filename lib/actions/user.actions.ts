@@ -138,9 +138,9 @@ export async function fetchUsers({
     const isNext = totalUsersCount > skipAmount + users.length;
 
     return { users, isNext };
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error fetching users:", error);
-    throw error;
+    throw new Error(`Failed to fetch users: ${error.message}`);
   }
 }
 
