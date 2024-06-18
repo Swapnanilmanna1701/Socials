@@ -44,7 +44,7 @@ async function Page({ params }: { params: { id: string } }) {
 
                 {tab.label === "Threads" && (
                   <p className='ml-1 rounded-sm bg-light-4 px-2 py-1 !text-tiny-medium text-light-2'>
-                    {communityDetails.threads.length}
+                    {communityDetails.threads?.length}
                   </p>
                 )}
               </TabsTrigger>
@@ -76,7 +76,7 @@ async function Page({ params }: { params: { id: string } }) {
           </TabsContent>
 
           <TabsContent value='requests' className='w-full text-light-1'>
-            {/* @ts-ignore */}
+            
             <ThreadsTab
               currentUserId={user.id}
               accountId={communityDetails._id}

@@ -19,13 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider
-      
-    >
-      <html lang='en'>
+    <ClerkProvider>
+      <html lang="en">
         <body className={`${inter.className} bg-dark-1`}>
           <div className="w-full flex justify-center items-center min-h-screen">
-          {children}
+            {children}
           </div>
         </body>
       </html>

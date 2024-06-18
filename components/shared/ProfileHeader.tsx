@@ -8,7 +8,7 @@ interface Props {
   username: string;
   imgUrl: string;
   bio: string;
-  type?: string;
+  type?: 'User' | 'Community';
 }
 
 function ProfileHeader({

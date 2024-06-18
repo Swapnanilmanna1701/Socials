@@ -113,6 +113,7 @@ function ThreadCard({
             </div>
           </div>
         </div>
+        
 
         <DeleteThread
           threadId={JSON.stringify(id)}
@@ -143,6 +144,8 @@ function ThreadCard({
           </Link>
         </div>
       )}
+      
+      
 
       {!isComment && community && (
         <Link
@@ -151,7 +154,7 @@ function ThreadCard({
         >
           <p className='text-subtle-medium text-gray-1'>
             {formatDateString(createdAt)}
-            {community && ` - ${community.name} Community`}
+            {" "} - {community.name} Community
           </p>
 
           <Image
