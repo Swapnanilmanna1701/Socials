@@ -120,7 +120,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                 {field.value ? (
                   <Image
                     src={field.value}
-                    alt="profile photo"
+                    alt="profile_photo"
                     width={96}
                     height={96}
                     priority
@@ -129,7 +129,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                 ) : (
                   <Image
                     src="/assets/profile.svg"
-                    alt="profile_icon"
+                    alt="profile_photo"
                     width={24}
                     height={24}
                     className="object-contain"
