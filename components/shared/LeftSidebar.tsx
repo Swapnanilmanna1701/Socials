@@ -9,7 +9,7 @@ import { SignOutButton } from "../ui/SignOutButton";
 import { sidebarLinks } from "@/constants";
 
 const LeftSidebar = () => {
-  const router = useRouter();
+  //const router = useRouter();
   const pathname = usePathname();
 
   const { userId } = useAuth();

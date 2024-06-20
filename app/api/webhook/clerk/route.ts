@@ -10,7 +10,7 @@ import { headers } from "next/headers";
 import { IncomingHttpHeaders } from "http";
 
 import { NextResponse } from "next/server";
-import {            
+import {
   addMemberToCommunity,
   createCommunity,
   deleteCommunity,

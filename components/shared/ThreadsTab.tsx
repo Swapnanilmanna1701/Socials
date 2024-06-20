@@ -76,6 +76,7 @@ async function ThreadsTab({ currentUserId, accountId, accountType }: Props) {
           }
           createdAt={thread.createdAt}
           comments={thread.children}
+          
         />
       ))}
     </section>
