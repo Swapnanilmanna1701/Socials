@@ -1,12 +1,12 @@
 import { currentUser } from "@clerk/nextjs/server";
 import { createUploadthing, type FileRouter } from "uploadthing/next";
-import { UploadThingError } from "uploadthing/server";
+//import { UploadThingError } from "uploadthing/server";
  
 const f = createUploadthing();
  
 const getUser = async () => await currentUser(); 
 export const ourFileRouter = {
-  media: f({ image: { maxFileSize: "4MB", maxFileCount: 1 } })
+  media:f({ image: { maxFileSize: "4MB", maxFileCount: 1 } })
     .middleware(async ({ req }) => {
       const user = await getUser();
  
