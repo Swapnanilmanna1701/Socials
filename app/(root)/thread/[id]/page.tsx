@@ -7,7 +7,7 @@ import ThreadCard from "@/components/cards/ThreadCard";
 import { fetchUser } from "@/lib/actions/user.actions";
 import { fetchThreadById } from "@/lib/actions/thread.actions";
 
-export const revalidate = 0;
+//export const revalidate = 0;
 
 async function page({ params }: { params: { id: string } }) {
   if (!params.id) return null;
@@ -50,7 +50,7 @@ async function page({ params }: { params: { id: string } }) {
           <ThreadCard
             key={childItem._id}
             id={childItem._id}
-            currentUserId={user.id}
+            currentUserId={user?.id || ''}
             parentId={childItem.parentId}
             content={childItem.text}
             image={thread.image}

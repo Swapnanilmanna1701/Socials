@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import { Threads } from "@/utils/data"
 import { formatDateString } from "@/lib/utils";
 import DeleteThread from "../forms/DeleteThread";
+import FormatPara from "../shared/FormatPara"
 
 interface Props {
   id: string;
