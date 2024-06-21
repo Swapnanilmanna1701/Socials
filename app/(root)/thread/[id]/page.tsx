@@ -33,6 +33,7 @@ async function page({ params }: { params: { id: string } }) {
           community={thread.community}
           createdAt={thread.createdAt}
           comments={thread.children}
+          image={thread.image}
         />
       </div>
 
@@ -52,6 +53,7 @@ async function page({ params }: { params: { id: string } }) {
             currentUserId={user.id}
             parentId={childItem.parentId}
             content={childItem.text}
+            image={thread.image}
             author={childItem.author}
             community={childItem.community}
             createdAt={childItem.createdAt}
