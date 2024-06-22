@@ -43,8 +43,8 @@ async function Home({
                 community={post.community}
                 createdAt={post.createdAt}
                 comments={post.children}
-                image={post.image}
-                accountId={post.accountId}
+                //image={post.image}
+                //accountId={post.accountId}
               />
             ))}
           </>
