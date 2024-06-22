@@ -84,8 +84,8 @@ const PostThread = ({ userId }: Props) => {
         await createThread({
             text: values.thread,
             image: values.image || '',
-            author: values.accountId,
-            community: organization ? organization.id : null,
+            author: userId,
+            communityId: organization ? organization.id : null,
             path: pathname
         })
 

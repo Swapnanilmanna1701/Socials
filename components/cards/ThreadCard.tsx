@@ -1,8 +1,9 @@
+import DeleteThread from "../forms/DeleteThread";
 import Image from "next/image";
 import Link from "next/link";
 import { Threads } from "@/utils/data"
 import { formatDateString } from "@/lib/utils";
-import DeleteThread from "../forms/DeleteThread";
+
 import FormatPara from "../shared/FormatPara"
 
 interface Props {
@@ -28,6 +29,7 @@ interface Props {
     };
   }[];
   isComment?: boolean;
+  accountId: string | null;
 }
 
 function ThreadCard({
@@ -37,7 +39,7 @@ function ThreadCard({
   content,
   author,
   image,
-  
+  accountId,
   community,
   createdAt,
   comments,
@@ -57,7 +59,7 @@ function ThreadCard({
                 src={author.image}
                 alt='user_community_image'
                 fill
-                className='cursor-pointer rounded-full'
+                className='cursor-pointer rounded-full object-contain'
               />
             </Link>
 
@@ -71,7 +73,21 @@ function ThreadCard({
               </h4>
             </Link>
 
-            <p className='mt-2 text-small-regular text-light-2'>{content}</p>
+            <div className="mt-2 text-small-regular text-light-2">
+                            <FormatPara content={content} />
+
+                            {image && (
+                                <div className="flex items-start justify-start">
+                                    <Image 
+                                        src={image}
+                                        alt="thread image"
+                                        width={500}
+                                        height={500}
+                                        className="w-full max-w-sm mt-10 mb-3 rounded-xl"
+                                    />
+                                </div>
+                            )}
+                        </div>
 
             <div className={`${isComment && "mb-10"} mt-5 flex flex-col gap-3`}>
               <div className='flex gap-3.5'>
@@ -118,7 +134,7 @@ function ThreadCard({
           </div>
         </div>
         
-
+              
         <DeleteThread
           threadId={JSON.stringify(id)}
           currentUserId={currentUserId}
